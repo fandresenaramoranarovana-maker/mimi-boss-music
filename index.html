@@ -1,52 +1,150 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080808">
-<title>MÏMÏ BØSS MUSIC</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;background:#080808;color:white;font-family:Arial,sans-serif}
-header{background:linear-gradient(135deg,#250000,#090909);padding:28px 15px;text-align:center;border-bottom:2px solid #d00000}
-header h1{margin:0;color:#ff2020;font-size:27px}
-header p{color:#ccc;margin-bottom:0}
-.container{padding:18px;max-width:600px;margin:auto}
-h2{font-size:19px;border-left:4px solid red;padding-left:10px}
-.song{background:#171717;border:1px solid #333;border-radius:12px;padding:15px;margin:12px 0}
-.song h3{margin:0 0 7px;font-size:16px}
-.song p{color:#bbb;font-size:13px;margin:0 0 12px}
-audio{width:100%;height:38px}
-footer{text-align:center;color:#888;padding:25px;font-size:12px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>MÏMÏ BØSS MUSIC</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 15px;
+      background: linear-gradient(135deg, #300000, #080808);
+      border-bottom: 2px solid #e50914;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #ff2020;
+      font-size: 27px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      color: #ddd;
+      font-size: 13px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px 15px;
+    }
+
+    .song {
+      background: #181818;
+      padding: 17px;
+      margin-bottom: 15px;
+      border-radius: 12px;
+      border: 1px solid #333;
+    }
+
+    .song h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .song p {
+      color: #bbb;
+      font-size: 13px;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .notice {
+      text-align: center;
+      color: #aaa;
+      font-size: 13px;
+      margin-top: 25px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #888;
+      font-size: 12px;
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<h1>🎵 MÏMÏ BØSS MUSIC</h1>
-<p>La musique de Mananjary • T.CH Studio</p>
-</header>
-<main class="container">
-<h2>🔥 NOS MUSIQUES</h2>
-<div id="songs"></div>
-</main>
-<footer>© MÏMÏ BØSS MUSIC • T.CH Studio</footer>
-<script>
-const songs = [
-["TSARA BE MALAGASY","MÏMÏ BØSS × Seh Jugah"],
-["VELOGNA","MÏMÏ BØSS × Stéphane Lion"],
-["ROI DU TERRAIN","MÏMÏ BØSS × Lion × JOLAH"],
-["LONG TIME","MÏMÏ BØSS × Joyah JR"],
-["FÊTY","MÏMÏ BØSS × Seh Jugah"],
-["MANANJARY MILALAO","MÏMÏ BØSS × Joyah JR"]
-];
-document.getElementById("songs").innerHTML=songs.map((s,i)=>`
-<div class="song">
-<h3>${i+1}. ${s[0]}</h3>
-<p>${s[1]}</p>
-<audio controls preload="none">
-<source src="musique${i+1}.mp3" type="audio/mpeg">
-</audio>
-</div>`).join("");
-</script>
+  <header>
+    <h1>MÏMÏ BØSS MUSIC</h1>
+    <p>La musique malagasy • T.CH Studio</p>
+  </header>
+
+  <main class="container">
+    <div class="song">
+      <h2>1. TSARA BE MALAGASY</h2>
+      <p>MÏMÏ BØSS × Seh Jugah</p>
+      <audio controls preload="none">
+        <source src="musique1.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="song">
+      <h2>2. VELOGNA</h2>
+      <p>MÏMÏ BØSS × Stéphane Lion</p>
+      <audio controls preload="none">
+        <source src="musique2.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="song">
+      <h2>3. ROI DU TERRAIN</h2>
+      <p>MÏMÏ BØSS × Lion × JOLAH</p>
+      <audio controls preload="none">
+        <source src="musique3.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="song">
+      <h2>4. LONG TIME</h2>
+      <p>MÏMÏ BØSS × Joyah JR</p>
+      <audio controls preload="none">
+        <source src="musique4.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="song">
+      <h2>5. FÊTY</h2>
+      <p>MÏMÏ BØSS × Seh Jugah</p>
+      <audio controls preload="none">
+        <source src="musique5.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <div class="song">
+      <h2>6. MANANJARY MILALAO</h2>
+      <p>MÏMÏ BØSS × Joyah JR</p>
+      <audio controls preload="none">
+        <source src="musique6.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <p class="notice">
+      Ampidiro ao amin'ny repository ny rakitra MP3 mba hahafahana mihaino ireo hira.
+    </p>
+  </main>
+
+  <footer>
+    © 2026 MÏMÏ BØSS MUSIC — T.CH Studio
+  </footer>
 </body>
 </html>
