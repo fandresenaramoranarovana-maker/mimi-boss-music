@@ -4,51 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080808">
-  <meta name="description" content="MÏMĮ BØSS MUSIC — Application musicale officielle de T.CH Studio">
+  <meta name="description" content="MÏMĮ BØSS MUSIC — T.CH Studio">
   <link rel="manifest" href="manifest.json">
   <title>MÏMĮ BØSS MUSIC</title>
 
   <style>
     * { box-sizing: border-box; }
-
     :root {
       --gold: #d8b45a;
       --red: #b51220;
       --black: #080808;
     }
-
     body {
       margin: 0;
       background: var(--black);
       color: white;
       font-family: Arial, sans-serif;
     }
-
     header {
       text-align: center;
       padding: 35px 14px;
       background: radial-gradient(ellipse at top, #4a1115, #080808 78%);
       border-bottom: 1px solid var(--gold);
     }
-
-    .crown {
-      color: var(--gold);
-      font-size: 40px;
-    }
-
+    .crown { color: var(--gold); font-size: 40px; }
     h1 {
       margin: 8px 0;
       color: var(--gold);
       font-size: 30px;
       letter-spacing: 2px;
     }
-
     header p {
       color: #ddd;
       font-size: 12px;
       letter-spacing: 3px;
     }
-
     .badge {
       display: inline-block;
       margin-top: 12px;
@@ -58,19 +48,26 @@
       color: var(--gold);
       font-size: 11px;
     }
-
     main {
       max-width: 650px;
       margin: auto;
       padding: 20px 14px;
     }
-
     .section-title {
       color: var(--gold);
       font-size: 18px;
       margin-bottom: 18px;
     }
-
+    .status {
+      color: #f5d98c;
+      background: #17100a;
+      border: 1px solid #42351e;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
     .song {
       display: flex;
       gap: 12px;
@@ -81,10 +78,9 @@
       border: 1px solid #42351e;
       border-radius: 14px;
     }
-
     .cover {
-      width: 58px;
-      height: 58px;
+      width: 48px;
+      height: 48px;
       flex-shrink: 0;
       display: flex;
       align-items: center;
@@ -93,46 +89,34 @@
       background: linear-gradient(145deg, #74101b, #17100a);
       border: 1px solid var(--gold);
       color: var(--gold);
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
     }
-
-    .song-info {
-      flex: 1;
-      min-width: 0;
-    }
-
+    .song-info { flex: 1; min-width: 0; }
     .song h2 {
       margin: 0 0 6px;
       color: #f5d98c;
       font-size: 14px;
     }
-
     .song p {
       margin: 0 0 9px;
       color: #aaa;
       font-size: 12px;
     }
-
-    audio {
-      display: block;
-      width: 100%;
-      height: 38px;
-    }
-
-    .share {
+    audio { display: block; width: 100%; height: 38px; }
+    .share, .offline {
       display: block;
       width: 100%;
       padding: 14px;
-      margin: 22px 0;
-      background: var(--red);
+      margin: 14px 0;
       border: 1px solid var(--gold);
       border-radius: 10px;
       color: white;
       font-weight: bold;
       font-size: 15px;
     }
-
+    .share { background: var(--red); }
+    .offline { background: #242014; }
     .studio {
       text-align: center;
       padding: 20px 10px;
@@ -141,13 +125,16 @@
       font-size: 12px;
       letter-spacing: 2px;
     }
-
     footer {
       text-align: center;
       padding: 20px 10px;
       color: #777;
       font-size: 11px;
       line-height: 1.8;
+    }
+    @media (max-width: 380px) {
+      .song { padding: 10px; gap: 9px; }
+      .cover { width: 40px; height: 40px; }
     }
   </style>
 </head>
@@ -157,18 +144,22 @@
     <div class="crown">♛</div>
     <h1>MÏMĮ BØSS</h1>
     <p>OFFICIAL MUSIC</p>
-    <div class="badge">DARK LUXURY EDITION</div>
+    <div class="badge">DARK LUXURY • OFFLINE EDITION</div>
   </header>
 
   <main>
     <h2 class="section-title">♫ MA MUSIQUE</h2>
+
+    <div class="status" id="offlineStatus" role="status">
+      Fanomanana ny mode hors ligne... Ampifandraiso amin'ny Internet ny finday ary sokafy ity pejy ity mba hitahirizana ireo rakitra.
+    </div>
 
     <div class="song">
       <div class="cover">01</div>
       <div class="song-info">
         <h2>ROI DU TERRAIN</h2>
         <p>MÏMĮ BØSS × JOLAH × LION</p>
-        <audio controls preload="none">
+        <audio controls preload="metadata">
           <source src="Broullion_Mïmį_Bøss_Le_Roi_Du_Terrain_x_Jolah_x_Lion.mp3.mp3" type="audio/mpeg">
         </audio>
       </div>
@@ -179,7 +170,7 @@
       <div class="song-info">
         <h2>MANANJARY MILALAO</h2>
         <p>MÏMĮ BØSS × JOYAH JR</p>
-        <audio controls preload="none">
+        <audio controls preload="metadata">
           <source src="MIMI BOSS X JOYAH -- MANANJARY MILALAO Sound By JX PROD.mp3" type="audio/mpeg">
         </audio>
       </div>
@@ -190,7 +181,7 @@
       <div class="song-info">
         <h2>VELOGNA</h2>
         <p>MÏMĮ BØSS × STÉPHANE LION</p>
-        <audio controls preload="none">
+        <audio controls preload="metadata">
           <source src="MÏMĮ BØSS -- VELOGNA Sound By JX PROD.mp3" type="audio/mpeg">
         </audio>
       </div>
@@ -201,7 +192,7 @@
       <div class="song-info">
         <h2>LONG TIME</h2>
         <p>MÏMĮ BØSS × JOYAH JR</p>
-        <audio controls preload="none">
+        <audio controls preload="metadata">
           <source src="MÏMĮ BØSS X JOYAH JR -- LONG TIME Sound By JX PROD.mp3" type="audio/mpeg">
         </audio>
       </div>
@@ -212,7 +203,7 @@
       <div class="song-info">
         <h2>TSARA BE MALAGASY</h2>
         <p>MÏMĮ BØSS × SEH JUGAH</p>
-        <audio controls preload="none">
+        <audio controls preload="metadata">
           <source src="MÏMĮ BØSS X SEH JUGAH -- MALAGASY Sound By JX PROD.mp3" type="audio/mpeg">
         </audio>
       </div>
@@ -223,12 +214,13 @@
       <div class="song-info">
         <h2>FÊTY</h2>
         <p>MÏMĮ BØSS × SEH JUGAH</p>
-        <audio controls preload="none">
+        <audio controls preload="metadata">
           <source src="MÏMĮ BØSS X SEH-JUGAH -FETY.mp3" type="audio/mpeg">
         </audio>
       </div>
     </div>
 
+    <button class="offline" id="saveButton">⬇ Tehirizo ho an'ny offline</button>
     <button class="share" id="shareButton">↗ Partager l'application</button>
 
     <div class="studio">T.CH STUDIO • MANANJARY</div>
@@ -240,6 +232,77 @@
   </footer>
 
   <script>
+    const statusBox = document.getElementById("offlineStatus");
+    const saveButton = document.getElementById("saveButton");
+
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register(
+        "/mimi-boss-music/service-worker.js"
+      ).then(() => {
+        statusBox.textContent =
+          "Service offline voaomana. Tsindrio Tehirizo ho an'ny offline rehefa misy Internet.";
+      }).catch(() => {
+        statusBox.textContent =
+          "Tsy mbola voaomana ny cache offline. Hamarino ny service worker.";
+      });
+    } else {
+      statusBox.textContent =
+        "Tsy manohana service worker ity navigateur ity.";
+    }
+
+    saveButton.addEventListener("click", async () => {
+      if (!("caches" in window)) {
+        statusBox.textContent = "Tsy afaka mitahiry offline ity navigateur ity.";
+        return;
+      }
+
+      saveButton.disabled = true;
+      statusBox.textContent =
+        "Mitahiry ny pejy sy ny hira... Aza akatona ity pejy ity.";
+
+      try {
+        const cache = await caches.open("mimi-boss-offline-v1");
+        const sources = [...document.querySelectorAll("audio source")];
+        const urls = [
+          "/mimi-boss-music/",
+          "/mimi-boss-music/index.html",
+          "/mimi-boss-music/manifest.json",
+          "/mimi-boss-music/launchericon-512x512.png",
+          ...sources.map(source => new URL(source.src, location.href).pathname)
+        ];
+
+        let saved = 0;
+        const failed = [];
+
+        for (const url of [...new Set(urls)]) {
+          try {
+            const response = await fetch(url, { cache: "reload" });
+            if (!response.ok) throw new Error("HTTP " + response.status);
+            await cache.put(url, response);
+            saved++;
+          } catch (error) {
+            failed.push(url);
+          }
+        }
+
+        if (failed.length === 0) {
+          statusBox.textContent =
+            "Vita ny fitahirizana! Rakitra " + saved +
+            " no voatahiry. Vonona hosedraina tsy misy Internet.";
+        } else {
+          statusBox.textContent =
+            "Voatahiry ny rakitra " + saved +
+            ", saingy tsy tafiditra ny " + failed.length +
+            ". Hamarino ny anaran'ny rakitra sy ny Internet.";
+        }
+      } catch (error) {
+        statusBox.textContent =
+          "Tsy nahomby ny fitahirizana. Hamarino ny Internet ary andramo indray.";
+      } finally {
+        saveButton.disabled = false;
+      }
+    });
+
     document.getElementById("shareButton").addEventListener("click", async () => {
       const data = {
         title: "MÏMĮ BØSS MUSIC",
