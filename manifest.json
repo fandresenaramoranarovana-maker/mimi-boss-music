@@ -1,13 +1,13 @@
 {
-  "id": "/mimi-boss-music/",
-  "name": "MÏMĮ BØSS MUSIC",
-  "short_name": "MÏMĮ BØSS",
-  "description": "Application musicale officielle de MÏMĮ BØSS - T.CH Studio",
-  "lang": "fr",
-  "start_url": "/mimi-boss-music/",
-  "scope": "/mimi-boss-music/",
-  "display": "standalone",
-  "orientation": "portrait",
-  "theme_color": "#080808",
-  "background_color": "#080808"
+"id": "/mimi-boss-music/",
+"name": "MÏMĮ BØSS MUSIC",
+"short_name": "MÏMĮ BØSS",
+"description": "Application musicale officielle de MÏMĮ BØSS - T.CH Studio",
+"lang": "fr",
+"start_url": "/mimi-boss-music/",
+"scope": "/mimi-boss-music/",
+"display": "standalone",
+"orientation": "portrait",
+"theme_color": "#080808",
+"background_color": "#080808"
 }
