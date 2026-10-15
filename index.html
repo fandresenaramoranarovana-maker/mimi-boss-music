@@ -69,3 +69,189 @@
       margin: auto;
       padding: 22px 16px;
     }
+
+    .section-title {
+      color: var(--gold);
+      font-size: 18px;
+      margin: 5px 0 18px;
+      letter-spacing: 1px;
+    }
+
+    .song {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      background: linear-gradient(120deg, #191919, #101010);
+      border: 1px solid #30291a;
+      border-radius: 14px;
+      padding: 15px;
+      margin-bottom: 13px;
+      box-shadow: 0 5px 18px #0008;
+    }
+
+    .cover {
+      width: 62px;
+      height: 62px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: linear-gradient(145deg, #6b1018, #17100a);
+      border: 1px solid #a98235;
+      color: var(--gold);
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .song-info {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .song h2 {
+      color: #f5d98c;
+      font-size: 15px;
+      margin: 0 0 7px;
+    }
+
+    .song p {
+      color: #aaa;
+      font-size: 12px;
+      margin: 0 0 10px;
+      line-height: 1.5;
+    }
+
+    audio {
+      display: block;
+      width: 100%;
+      height: 38px;
+    }
+
+    .studio {
+      margin-top: 28px;
+      padding: 20px 12px;
+      text-align: center;
+      border-top: 1px solid #49391b;
+      border-bottom: 1px solid #49391b;
+      color: var(--gold);
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 22px 12px;
+      color: #777;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 380px) {
+      .song {
+        padding: 11px;
+        gap: 10px;
+      }
+
+      .cover {
+        width: 50px;
+        height: 50px;
+      }
+
+      .song h2 {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="crown">♛</div>
+  <h1>MÏMĮ BØSS</h1>
+  <p class="subtitle">OFFICIAL MUSIC</p>
+  <div class="badge">DARK LUXURY EDITION</div>
+</header>
+
+<main>
+  <h2 class="section-title">♫  MA MUSIQUE</h2>
+
+  <div class="song">
+    <div class="cover">01</div>
+    <div class="song-info">
+      <h2>ROI DU TERRAIN</h2>
+      <p>MÏMĮ BØSS × JOLAH × LION</p>
+      <audio controls preload="none">
+        <source src="Broullion_Mïmį_Bøss_Le_Roi_Du_Terrain_x_Jolah_x_Lion.mp3.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <div class="song">
+    <div class="cover">02</div>
+    <div class="song-info">
+      <h2>MANANJARY MILALAO</h2>
+      <p>MÏMĮ BØSS × JOYAH JR</p>
+      <audio controls preload="none">
+        <source src="MIMI BOSS X JOYAH -- MANANJARY MILALAO Sound By JX PROD.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <div class="song">
+    <div class="cover">03</div>
+    <div class="song-info">
+      <h2>VELOGNA</h2>
+      <p>MÏMĮ BØSS × STÉPHANE LION</p>
+      <audio controls preload="none">
+        <source src="MÏMĮ BØSS -- VELOGNA Sound By JX PROD.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <div class="song">
+    <div class="cover">04</div>
+    <div class="song-info">
+      <h2>LONG TIME</h2>
+      <p>MÏMĮ BØSS × JOYAH JR</p>
+      <audio controls preload="none">
+        <source src="MÏMĮ BØSS X JOYAH JR -- LONG TIME Sound By JX PROD.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <div class="song">
+    <div class="cover">05</div>
+    <div class="song-info">
+      <h2>TSARA BE MALAGASY</h2>
+      <p>MÏMĮ BØSS × SEH JUGAH</p>
+      <audio controls preload="none">
+        <source src="MÏMĮ BØSS X SEH JUGAH -- MALAGASY Sound By JX PROD.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <div class="song">
+    <div class="cover">06</div>
+    <div class="song-info">
+      <h2>FÊTY</h2>
+      <p>MÏMĮ BØSS × SEH JUGAH</p>
+      <audio controls preload="none">
+        <source src="MÏMĮ BØSS X SEH-JUGAH -FETY.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <div class="studio">
+    T.CH STUDIO • MANANJARY
+  </div>
+</main>
+
+<footer>
+  © 2026 MÏMĮ BØSS MUSIC<br>
+  CRÉATION • MUSIQUE • LÉGENDE
+</footer>
+
+</body>
+</html>
