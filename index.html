@@ -1,138 +1,71 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="mg">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090909">
-  <title>MÏMÏ BØSS MUSIC</title>
+  <meta name="theme-color" content="#080808">
+  <title>MÏMĮ BØSS MUSIC</title>
 
   <style>
     * {
       box-sizing: border-box;
     }
 
+    :root {
+      --gold: #d8b45a;
+      --red: #b51220;
+      --black: #080808;
+      --card: #151515;
+    }
+
     body {
       margin: 0;
-      background: #090909;
-      color: white;
+      background: var(--black);
+      color: #fff;
       font-family: Arial, sans-serif;
     }
 
     header {
       text-align: center;
-      padding: 32px 12px;
-      background: linear-gradient(135deg, #650000, #090909);
-      border-bottom: 3px solid #e50914;
+      padding: 38px 18px 30px;
+      background:
+        radial-gradient(ellipse at top, #4a1115 0%, #160b0b 45%, #080808 80%);
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .crown {
+      font-size: 35px;
+      margin-bottom: 8px;
     }
 
     h1 {
-      color: #ff3030;
-      font-size: 28px;
       margin: 0;
+      font-size: clamp(27px, 7vw, 38px);
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-shadow: 0 0 18px #9b6d2344;
     }
 
-    header p {
+    .subtitle {
+      margin: 12px 0 0;
       color: #ddd;
+      font-size: 12px;
+      letter-spacing: 3px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 7px 14px;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      color: var(--gold);
+      font-size: 11px;
+      letter-spacing: 1px;
     }
 
     main {
       max-width: 650px;
       margin: auto;
-      padding: 18px;
+      padding: 22px 16px;
     }
-
-    .song {
-      background: #191919;
-      border: 1px solid #383838;
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 16px;
-    }
-
-    .song h2 {
-      font-size: 18px;
-      margin: 0 0 7px;
-      color: #ff4545;
-    }
-
-    .song p {
-      color: #bbb;
-      font-size: 13px;
-    }
-
-    audio {
-      display: block;
-      width: 100%;
-      margin-top: 12px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 22px;
-      color: #aaa;
-      font-size: 12px;
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <h1>MÏMÏ BØSS MUSIC</h1>
-    <p>🎵 Musique Malagasy • T.CH Studio</p>
-  </header>
-
-  <main>
-    <div class="song">
-      <h2>1. ROI DU TERRAIN</h2>
-      <p>MÏMÏ BØSS × JOLAH × LION</p>
-      <audio controls preload="none">
-        <source src="Broullion_M%C3%AFm%C4%AF_B%C3%B8ss_Le_Roi_Du_Terrain_x_Jolah_x_Lion.mp3.mp3" type="audio/mpeg">
-      </audio>
-    </div>
-
-    <div class="song">
-      <h2>2. MANANJARY MILALAO</h2>
-      <p>MÏMÏ BØSS × JOYAH JR</p>
-      <audio controls preload="none">
-        <source src="MIMI%20BOSS%20X%20JOYAH%20--%20MANANJARY%20MILALAO%20Sound%20By%20JX%20PROD.mp3" type="audio/mpeg">
-      </audio>
-    </div>
-
-    <div class="song">
-      <h2>3. VELOGNA</h2>
-      <p>MÏMÏ BØSS × STÉPHANE LION</p>
-      <audio controls preload="none">
-        <source src="M%C3%8FM%C4%AE%20B%C3%98SS%20--%20VELOGNA%20Sound%20By%20JX%20PROD.mp3" type="audio/mpeg">
-      </audio>
-    </div>
-
-    <div class="song">
-      <h2>4. LONG TIME</h2>
-      <p>MÏMÏ BØSS × JOYAH JR</p>
-      <audio controls preload="none">
-        <source src="M%C3%8FM%C4%AE%20B%C3%98SS%20X%20JOYAH%20JR%20--%20LONG%20TIME%20Sound%20By%20JX%20PROD.mp3" type="audio/mpeg">
-      </audio>
-    </div>
-
-    <div class="song">
-      <h2>5. TSARA BE MALAGASY</h2>
-      <p>MÏMÏ BØSS × SEH JUGAH</p>
-      <audio controls preload="none">
-        <source src="M%C3%8FM%C4%AE%20B%C3%98SS%20X%20SEH%20JUGAH%20--%20MALAGASY%20Sound%20By%20JX%20PROD.mp3" type="audio/mpeg">
-      </audio>
-    </div>
-
-    <div class="song">
-      <h2>6. FÊTY</h2>
-      <p>MÏMÏ BØSS × SEH JUGAH</p>
-      <audio controls preload="none">
-        <source src="M%C3%8FM%C4%AE%20B%C3%98SS%20X%20SEH-JUGAH%20-FETY.mp3" type="audio/mpeg">
-      </audio>
-    </div>
-  </main>
-
-  <footer>
-    © 2026 MÏMÏ BØSS MUSIC • T.CH Studio
-  </footer>
-</body>
-</html>
